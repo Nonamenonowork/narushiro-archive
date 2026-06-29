@@ -2,15 +2,25 @@
 
 このディレクトリだけをホスティング先へ公開する。
 
+## 公開ページ
+
+- `index.html`：キーワード入力式の資料照会端末
+- `complete/index.html`：全38話、作中資料、地図・図版を統合した完全インタラクティブ版
+- `trailer/index.html`：約70秒の操作型予告版。音は読者が再生した場合のみ鳴る
+- `text-index.html`：JavaScriptや画像を使用しない文字資料版
+
 ## 更新
 
 作中資料や画像を更新した後、プロジェクト直下で次を実行する。
 
 ```sh
 ruby build_public.rb
+ruby build_interactive.rb
 ```
 
 この処理は12資料、表示用CSS・JavaScript、公開画像をコピーし、会議録・資料プロファイルを除いた公開専用 `meeting-data.js` を生成する。
+
+`build_interactive.rb` は第三稿と全38話構成から `complete/story-data.js` を再生成する。本文改稿後は必ず実行する。
 
 ## 公開前確認
 
@@ -24,4 +34,3 @@ ruby build_public.rb
 ## JavaScript無効時
 
 資料解放機能は動作しない。`text-index.html` と小説本文だけで情報不足が起きない設計とする。
-

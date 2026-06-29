@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#050809">
+  <meta name="description" content="『未登録放送』インタラクティブ予告版。音は操作した場合のみ再生されます。">
+  <title>未登録放送｜インタラクティブ予告版</title>
+  <link rel="stylesheet" href="trailer.css">
+</head>
+<body>
+  <a class="skip" href="#trailer">予告編へ移動</a>
+  <header class="trailer-head">
+    <a href="../index.html">NS-2026-0723</a>
+    <p>INTERACTIVE TRAILER / SOUND OPTIONAL</p>
+  </header>
+
+  <main id="trailer">
+    <section class="poster" id="poster">
+      <div class="poster-noise" aria-hidden="true"></div>
+      <div class="poster-copy">
+        <p>夏のホラー2026「音」</p>
+        <h1>未登録<span>放送</span></h1>
+        <p class="tagline">聞いた声ではなく、記録された声を疑え。</p>
+        <button id="play" type="button"><span>▶</span> 予告記録を再生</button>
+        <small>音はボタンを押した場合のみ再生されます / 約70秒</small>
+      </div>
+      <div class="poster-meter" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+    </section>
+
+    <section class="cinema" id="cinema" aria-live="polite" aria-label="予告編">
+      <div class="screen">
+        <figure class="shot active" data-at="0">
+          <img src="../assets/photos/old-n03-inspection.jpg" alt="山中の旧防災無線子局。">
+          <figcaption><span>18:00:00</span> 定時チャイム、正常終了。</figcaption>
+        </figure>
+        <figure class="shot" data-at="8">
+          <img src="../assets/maps/narushiro-overview.svg" alt="鳴代市の概略地図。">
+          <figcaption><span>18:00:11</span> その後の送信記録は、ない。</figcaption>
+        </figure>
+        <figure class="shot" data-at="17">
+          <img src="../assets/photos/interview-notebook-facsimile.jpg" alt="複数の聞き取りを記した手書きノート。">
+          <figcaption><span>VOICE 01</span> 姉には、自分の名前。</figcaption>
+        </figure>
+        <figure class="shot" data-at="26">
+          <img src="../assets/documents/audio-sync-comparison.svg" alt="三つの録音を比較する音声解析図。">
+          <figcaption><span>VOICE 02</span> 弟には、弟の名前。</figcaption>
+        </figure>
+        <figure class="shot" data-at="35">
+          <img src="../assets/photos/night-watch-undated.jpg" alt="提灯と拍子木を持つ夜回りの古写真。">
+          <figcaption><span>1989 / 1998 / 2026</span> 記録は、声より先にあったのか。</figcaption>
+        </figure>
+        <figure class="shot" data-at="45">
+          <img src="../assets/maps/narushiro-2026-route.svg" alt="四つの子局が採石場方向へ並ぶ地図。">
+          <figcaption><span>18:06 → 18:24</span> 廃止された子局が、順番に鳴る。</figcaption>
+        </figure>
+        <figure class="shot" data-at="55">
+          <img src="../assets/maps/narusawa-1989-evacuation.svg" alt="旧避難路と採石場を示す地図。">
+          <figcaption><span>UNCONFIRMED</span> 人間がしたことは、記録に残った。</figcaption>
+        </figure>
+        <figure class="shot final-shot" data-at="64">
+          <div class="final-card"><p>同じ音声から<br>全員が別の名前を聞いた。</p><h2>未登録放送</h2><span>全38話 / 調査・考察型ホラー</span></div>
+          <figcaption><span>DO NOT REPLY</span> 聞こえているなら、まだ返事をしないで。</figcaption>
+        </figure>
+        <div class="scanline" aria-hidden="true"></div>
+      </div>
+      <div class="transport">
+        <button id="toggle" type="button" aria-label="再生・一時停止">▶</button>
+        <div class="timeline"><i id="timeline-progress"></i></div>
+        <time id="time">00:00 / 01:10</time>
+        <button id="sound" type="button" aria-pressed="true">音 ON</button>
+      </div>
+    </section>
+
+    <section class="after-trailer" id="after-trailer">
+      <p>CASE NS-2026-0723</p>
+      <h2>あなたが見るのは、<br>事件の記録か。<br>記録が作った事件か。</h2>
+      <div class="cta-row">
+        <a class="primary" href="../complete/index.html">完全版を読む</a>
+        <a href="../index.html">資料照会端末へ</a>
+      </div>
+      <ul>
+        <li>外部資料を見なくても、本編だけで完結します。</li>
+        <li>音声は自動再生されません。</li>
+        <li>実在の自治体・事件・人物とは関係のないフィクションです。</li>
+      </ul>
+    </section>
+  </main>
+  <script src="trailer.js"></script>
+</body>
+</html>
